@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+require dirname(__FILE__)."/Setting/Command/Command.php";
+require_once   dirname((__FILE__)."")."/app/core/AutoLoad.php";
+
+
+$Command = new Command($argv);
+$Command->run();
+
+
+?>
