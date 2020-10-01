@@ -36,9 +36,10 @@ class Router
        
         if($method==="GET"){
 
-
+         
            foreach(Router::$urlListGet as $key=>$value){
 
+          
             if($url==$value[0]){
              $kt=true;
              $vt=$key;
@@ -124,9 +125,21 @@ class Router
         }
        
      
-     if(Router::$bonlebonget==count(Router::$urlListGet)||Router::$bonlebonpost==count(Router::$urlListPost)){
-        Router::notfound();
-        return new static();
+     if(Router::$bonlebonget==count(Router::$urlListGet)){
+
+      
+        
+           
+            Router::notfound();
+            return new static();
+      
+
+     }
+     if(Router::$bonlebonpost==count(Router::$urlListPost)){
+        
+            Router::notfound();
+            return new static();
+        
      }
      
       
