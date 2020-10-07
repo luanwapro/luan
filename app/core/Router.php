@@ -1,6 +1,5 @@
 <?php
-require_once(dirname((__FILE__)."/Controller.php"));
-require_once dirname(__FILE__)."/AutoLoad.php";
+require_once   dirname((__FILE__)."")."/AutoLoad.php";
 AutoLoad::load();
 
 use app\controllers\homeController;
@@ -37,7 +36,7 @@ class Router
         if($method==="GET"){
 
          
-           foreach(Router::$urlListGet as $key=>$value){
+           foreach(self::$urlListGet as $key=>$value){
 
           
             if($url==$value[0]){
@@ -55,13 +54,13 @@ class Router
            
 
            
-            Router::action((Router::$urlListGet[$vt]),$url);
+            self::action((self::$urlListGet[$vt]),$url);
 
-            return new static();
+            return $this;
         
            }else{
             
-            foreach(Router::$urlListGet as $key=>$value){
+            foreach(self::$urlListGet as $key=>$value){
 
                 $urla=explode("/",$value[0]);
                 $urlb=explode("/",$url);
@@ -69,8 +68,8 @@ class Router
 
                    
                  
-                    Router::action((Router::$urlListGet[$key]),$url);
-                    return new static();
+                    self::action((self::$urlListGet[$key]),$url);
+                    return $this;
                     
                 }else{
                    
@@ -79,7 +78,7 @@ class Router
 
             }
            
-            Router::$bonlebonget+=1;
+            self::$bonlebonget+=1;
 
           
            }
@@ -88,7 +87,7 @@ class Router
 
 
 
-            foreach(Router::$urlListPost as $key=>$value){
+            foreach(self::$urlListPost as $key=>$value){
 
             
                 if($url==$value[0]){
@@ -100,45 +99,45 @@ class Router
                }
                if($kt!==false){
                 
-                Router::action((Router::$urlListPost[$vt]),$url);
-                return new static();
+                self::action((self::$urlListPost[$vt]),$url);
+                return $this;
                }else{
             
-                foreach(Router::$urlListPost as $key=>$value){
+                foreach(self::$urlListPost as $key=>$value){
     
                     $urla=explode("/",$value[0]);
                     $urlb=explode("/",$url);
                     if(count($urla)==count($urlb)&&$urlb[1]==$urla[1]){
                        
-                        Router::action((Router::$urlListPost[$key]),$url);
-                        return new static();
+                        self::action((self::$urlListPost[$key]),$url);
+                        return $this;
                       
                     }
                    
     
                 }
 
-                Router::$bonlebonpost+=1;
+                self::$bonlebonpost+=1;
                }
  
     
         }
        
      
-     if(Router::$bonlebonget==count(Router::$urlListGet)){
+     if(self::$bonlebonget==count(self::$urlListGet)&&count(self::$urlListGet)!=0){
 
       
         
            
-            Router::notfound();
-            return new static();
+            self::notfound();
+            return $this;
       
 
      }
-     if(Router::$bonlebonpost==count(Router::$urlListPost)){
+     if(self::$bonlebonpost==count(self::$urlListPost)&&count(self::$urlListPost)!=0){
         
-            Router::notfound();
-            return new static();
+            self::notfound();
+            return $this;
         
      }
      
@@ -148,32 +147,38 @@ class Router
     }
 
     function perForMance(){
+       
         if ( isset($_SERVER['PATH_INFO']))
         {
-        Router::start($_SERVER['REQUEST_METHOD'],$_SERVER['PATH_INFO']);
+           
+        self::start($_SERVER['REQUEST_METHOD'],$_SERVER['PATH_INFO']);
+      
         }else{
-           Router::index();
+           self::index();
         }
+  
+       
+      
     }
 
     function notfound(){
 
-        Router::get("/404","systemController@notFound");
-        Router::start($_SERVER['REQUEST_METHOD'],"/404");
+        self::get("/404","systemController@notFound");
+        self::start($_SERVER['REQUEST_METHOD'],"/404");
     }
 
     function index(){
-        echo "<script>console.log('Debug Objects: " . "hahaha" . "' );</script>";
-        Router::get("/indexluandeptrai","systemController@indexluandeptrai");
-        Router::start($_SERVER['REQUEST_METHOD'],"/indexluandeptrai");
+       
+        self::get("/indexluandeptrai","systemController@indexluandeptrai");
+        self::start($_SERVER['REQUEST_METHOD'],"/indexluandeptrai");
     }
 
 
 
     function forBidden(){
 
-        Router::get("/403","systemController@forBidden");
-        Router::start($_SERVER['REQUEST_METHOD'],"/403");
+        self::get("/403","systemController@forBidden");
+        self::start($_SERVER['REQUEST_METHOD'],"/403");
     }
     function removeArrayString($a,$b)
     
@@ -215,24 +220,24 @@ class Router
     function redirect($url){
         
    
-       if(Router::$newAcction==1){
-       Router::$redirectTmp=Router::$urlListGet[count(Router::$urlListGet)-1][0];
+       if(self::$newAcction==1){
+       self::$redirectTmp=self::$urlListGet[count(self::$urlListGet)-1][0];
       
-       }elseif(Router::$newAcction==2){
-        Router::$redirectTmp=Router::$urlListPost[count(Router::$urlListPost)-1][0];
+       }elseif(self::$newAcction==2){
+        self::$redirectTmp=self::$urlListPost[count(self::$urlListPost)-1][0];
        }
 
-       $strp ="/".Router::$tenprefix. Router::$redirectTmp;
+       $strp ="/".self::$tenprefix. self::$redirectTmp;
        if(isset($_SERVER['PATH_INFO'])){
 
-         if(  Router::$redirectTmp==$_SERVER['PATH_INFO']){
+         if(  self::$redirectTmp==$_SERVER['PATH_INFO']){
             
             
         }elseif( $strp==$_SERVER['PATH_INFO']){
             header( "Location:". $url );
         }
     }
-        return new static();
+        return $this;
         
 
     }
@@ -259,7 +264,7 @@ class Router
                 }
 
               
-                $arrayvalue=  Router::removeArrayString( $arrayvalue,$url);
+                $arrayvalue=  self::removeArrayString( $arrayvalue,$url);
 
               
                  
@@ -280,15 +285,65 @@ class Router
 
         }else if(is_string($array[1])){
             $class = "app\\controllers\\".explode("@",$array[1])[0];
+
           if(class_exists( $class)){
 
-            
             $a =new $class;
-            if($arrayvalue!=null){
+              $ref = new ReflectionMethod("{$class}", explode("@",$array[1])[1]);
+              $reflectionParams = $ref->getParameters();
+            if(count($ref->getParameters())>0){
+
+
+                foreach(  $reflectionParams  as $key=>$param) {
+                    if($param->getType()!=null){
+
+                        $classparam =(string)$param->getType();
+                        $bien = new $classparam;
+
+
+                        if(isset(  $arrayvalue [$key])){
+
+                           array_splice( $arrayvalue, $key, 0,[$bien] );
+
+
+
+                        }else {
+                            $arrayvalue [$key] = $bien;
+
+
+
+                        }
+                    }
+
+
+                }
+                if(count($arrayvalue)>count($ref->getParameters()))
+                {
+                      for($i=count($arrayvalue)-1;$i>0;$i--){
+                          if(count($arrayvalue)>count($ref->getParameters())){
+
+                              if(is_string($arrayvalue[$i])) {
+                                  unset($arrayvalue[$i]);
+                              }
+                          }
+                          else if(count($arrayvalue)>count($ref->getParameters())) {
+                              break;
+
+                          }
+
+                      }
+                }
+
+
+
                 call_user_func_array(array( "{$class}",explode("@",$array[1])[1]),$arrayvalue);
+
+
              die();
             }else{
-                call_user_func(array( "{$class}",explode("@",$array[1])[1]));
+              
+
+              call_user_func(array( "{$class}",explode("@",$array[1])[1]));
            
                 die();
             }
@@ -306,48 +361,50 @@ class Router
 
     function includeGroup($func,$namefunc){
         
-        if( Router::$tenprefix!=null){
+        if( self::$tenprefix!=null){
 
         
-            for($i=0;$i<Router::$countGroupGet;$i++){
+            for($i=0;$i<self::$countGroupGet;$i++){
                
-       Router::$urlListGet[count(Router::$urlListGet)-($i+1)][0]="/".$namefunc.(string)(Router::$urlListGet[count(Router::$urlListGet)-($i+1)])[0];
+       self::$urlListGet[count(self::$urlListGet)-($i+1)][0]="/".$namefunc.(string)(self::$urlListGet[count(self::$urlListGet)-($i+1)])[0];
             }
 
-            for($i=0;$i<Router::$countGroupPost;$i++){
+            for($i=0;$i<self::$countGroupPost;$i++){
                
-                Router::$urlListPost[count(Router::$urlListPost)-($i+1)][0]="/".$namefunc.(string)(Router::$urlListPost[count(Router::$urlListPost)-($i+1)])[0];
+                self::$urlListPost[count(self::$urlListPost)-($i+1)][0]="/".$namefunc.(string)(self::$urlListPost[count(self::$urlListPost)-($i+1)])[0];
                      }
         }
         
-        return new static();
+        return $this;
     }
     function group($func){
        if(is_callable($func)){
-        //  Router::$isFuncGroup=1;
+        //  self::$isFuncGroup=1;
         call_user_func(($func));
 
-        Router::includeGroup($func,Router::$tenprefix);
+        self::includeGroup($func,self::$tenprefix);
        }
-       Router::$tenprefix=null;
-       return new static();
+       self::$tenprefix=null;
+       return $this;
 
     }
     function prefix($str){
        
-        Router::$tenprefix=$str;
+        self::$tenprefix=$str;
        
         
-        return new static();
+        return $this;
     }
 
-   
+   function end(){
+
+   }
     function get($url,$action)
     {   
      
      
         $kt =true;
-        foreach(Router::$urlListGet as $key=>$value){
+        foreach(self::$urlListGet as $key=>$value){
             
             if($value[0]==$url){
                 $kt =  false;
@@ -358,18 +415,18 @@ class Router
     
         if($kt==true){
             if([$url,$action]!==null)
-            array_push( Router::$urlListGet, [$url,$action]);
-            Router::$newAcction=1;
+            array_push( self::$urlListGet, [$url,$action]);
+            self::$newAcction=1;
 
         }
           
         // print_r($_SERVER);
         
-        if(Router::$tenprefix!=null){
-      Router::$countGroupGet+=1;
+        if(self::$tenprefix!=null){
+      self::$countGroupGet+=1;
         }
 
-        return new static();
+//        return $this;
        
  
     }
@@ -378,7 +435,7 @@ class Router
     function post($url,$action)
     {
         $kt =true;
-        foreach(Router::$urlListPost as $key=>$value){
+        foreach(self::$urlListPost as $key=>$value){
                
             if($value[0]==$url){
                 $kt =  false;
@@ -389,18 +446,15 @@ class Router
            
         if($kt==true){
             if([$url,$action]!==null)
-             Router::$urlListPost[] =[$url,$action];
-             Router::$newAcction=2;
+             self::$urlListPost[] =[$url,$action];
+             self::$newAcction=2;
           
-            if ( isset($_SERVER['PATH_INFO']))
-            {
-            Router::start($_SERVER['REQUEST_METHOD'],$_SERVER['PATH_INFO']);
-            }
+
         }
-        if(Router::$tenprefix!=null){
-            Router::$countGroupPost+=1;
+        if(self::$tenprefix!=null){
+            self::$countGroupPost+=1;
          }
-         return new static();
+//         return $this;
     }
     
 }

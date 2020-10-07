@@ -7,17 +7,18 @@ include dirname(__FILE__)."/../http/web.php";
 
 class App
 {
-    private $router;
+    public $router;
     function __construct()
-    {
+    {$this->router= new Router;
 
-        $this->router= new Router;
 
         
     }
     public function run(){
 
-      Router::perForMance();
+        $this->router= new Router;
+        $this->router->perForMance();
+
     }
 }
 

@@ -9,7 +9,15 @@ class AutoLoad{
     }
     function load(){
 
+        include dirname(__FILE__)."/Controller.php";
+
+
         foreach (glob(dirname(__FILE__)."/../controllers/"."*.php") as $filename)
+        {
+             include  $filename;
+
+        }
+        foreach (glob(dirname(__FILE__)."/../baseControllers/"."*.php") as $filename)
         {
              include  $filename;
 

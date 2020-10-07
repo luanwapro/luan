@@ -8,6 +8,7 @@ class Command{
     static $argv;
 function __construct($argvs)
 {
+    AutoLoad::load();
     self::$argv=$argvs;
     
 }
@@ -24,18 +25,20 @@ function run(){
     if(count(self::$argv)>1){
         // self::gioithieu();
         include dirname(__FILE__)."/Server.php";
-        switch (self::$argv[1]) {
+        switch ( explode(":", (self::$argv[1]))[0]) {
             case "run":
 
                self::runCommand($run);
               break;
-            case "make:controller":
+            case explode(":", (self::$argv[1]))[0]:
+
                 self::makeCommand($make);
 
                 break;
          
             default:
             echo "Please check the command";
+
               
           }
 
@@ -95,6 +98,7 @@ function getKeyArray($str,$array){
 }
 
 function  makeCommand($run){
+
     self::getKeyArrayMake(self::stringArgv(),$run);
 }
 function runCommand($run){

@@ -1,10 +1,10 @@
 <?php
 namespace  app\controllers;
-require_once(dirname(__FILE__)."/../core/Controller.php");
+
 
 use app\core\controller;
- 
-         class hahaController extends controller{
+ use app\controllers\baseControllers\DB;
+         class hahaController extends controller {
 
             function __construct(){
 
@@ -12,7 +12,13 @@ use app\core\controller;
 
            function luan(){
 
-//                return render("",[]);
+
+               $baiviet=DB::table("baiviet")->get(6);
+
+            return   self::render("luan",["luan"=>$baiviet]);
+
+
+
            }
 
 

@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="98e93149-5ead-4081-9e2a-6bd49c9f485f" name="Default Changelist" comment="" />
+    <list default="true" id="98e93149-5ead-4081-9e2a-6bd49c9f485f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/controllers/baseControllers/baseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/baseControllers/dbController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Setting/Command/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/Setting/Command/Command.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Setting/Command/Server.php" beforeDir="false" afterPath="$PROJECT_DIR$/Setting/Command/Server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/hahaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/hahaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/luanController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/luandeptraiController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/systemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/systemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/AutoLoad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/AutoLoad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/http/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luandeptrai" beforeDir="false" afterPath="$PROJECT_DIR$/luandeptrai" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +62,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../phimhayqua" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -38,12 +73,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\luand\Desktop\Framework" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\luand\Desktop\Framework" />
       <recent name="C:\Users\luand\Desktop\Framework\app" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\luand\Desktop\Framework" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -58,20 +93,51 @@
       <workItem from="1601550333571" duration="2052000" />
       <workItem from="1601577437993" duration="1285000" />
       <workItem from="1601578838044" duration="73000" />
+      <workItem from="1601589520606" duration="65000" />
+      <workItem from="1601660877868" duration="8195000" />
+      <workItem from="1601645680273" duration="934000" />
+      <workItem from="1601646875882" duration="6242000" />
+      <workItem from="1601664763331" duration="1475000" />
+      <workItem from="1601724885199" duration="43000" />
+      <workItem from="1601725111277" duration="11190000" />
+      <workItem from="1601745175733" duration="4064000" />
+      <workItem from="1601903983462" duration="15455000" />
+      <workItem from="1601957034921" duration="18519000" />
+      <workItem from="1602063984491" duration="8861000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="700" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601499454172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="700" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601499454172" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1601578730705">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601730153703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601578730705" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601730153703" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602066143873">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602066143873" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1602066032586">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602066032586" />
   </component>
 </project>

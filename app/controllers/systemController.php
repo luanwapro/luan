@@ -1,5 +1,6 @@
-<?php 
+<?php
 namespace app\controllers;
+
 class systemController{
 
     function __construct()
@@ -17,6 +18,7 @@ class systemController{
   
       }
       function indexluandeptrai(){
+      
         echo  file_get_contents((dirname(__FILE__)."/../../resources/html/index.html") );
   
       }

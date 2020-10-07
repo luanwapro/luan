@@ -50,6 +50,23 @@ $make=[
             echo $e;
         }
     },""],
+    "make:view"=>[function($viewname){
+        $dir = dirname(__FILE__) . "/../../app/views/".$viewname;
+        if (file_exists($dir)) {
+            echo "Warring: " . $viewname . " view already exist\n";
+        } else {
+
+            mkdir($dir, 0777, true);
+            $controllertmp = "<?php";
+            $fp = fopen($dir  . "/index.php", "wb");
+            fwrite($fp, $controllertmp);
+            fclose($fp);
+            echo "successful file creation\n";
+
+        }
+
+
+    }]
 ]
 
 
