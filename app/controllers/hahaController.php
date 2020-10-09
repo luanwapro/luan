@@ -13,9 +13,11 @@ use app\core\controller;
            function luan(){
 
 
-               $baiviet=DB::table("baiviet")->get(6);
+               $baiviet=DB::Mongo("mongodb://luan:luan@cluster0-shard-00-00.ndi66.mongodb.net:27017,cluster0-shard-00-01.ndi66.mongodb.net:27017,cluster0-shard-00-02.ndi66.mongodb.net:27017/luan?ssl=true&replicaSet=atlas-rb1qrq-shard-0&authSource=admin&retryWrites=true&w=majority");
 
-            return   self::render("luan",["luan"=>$baiviet]);
+
+               var_dump($baiviet);
+//                 return   self::render("luan",["luan"=>$baiviet]);
 
 
 

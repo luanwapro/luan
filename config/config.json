@@ -1,0 +1,20 @@
+{
+  "APP_NAME": "",
+
+  "DB": [{
+  "DB_CONNECTION": "mongo",
+  "DB_HOST":"cluster0.ndi66.mongodb.net",
+  "DB_PORT":"27017",
+  "DB_DATABASE":"luan",
+  "DB_USERNAME":"luan",
+  "DB_PASSWORD":"luan",
+  "DB_CONNECTION1": "mongo",
+  "DB_HOST1":"cluster0.ndi66.mongodb.net",
+  "DB_PORT1":"27017",
+  "DB_DATABASE1":"luan",
+  "DB_USERNAME1":"luan",
+  "DB_PASSWORD1":"luan"
+    }
+    ]
+
+}

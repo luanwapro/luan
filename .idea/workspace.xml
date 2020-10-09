@@ -20,22 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98e93149-5ead-4081-9e2a-6bd49c9f485f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/baseControllers/baseController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/baseControllers/dbController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Framework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Setting/Command/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/Setting/Command/Command.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Setting/Command/Server.php" beforeDir="false" afterPath="$PROJECT_DIR$/Setting/Command/Server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/baseControllers/dbController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/baseControllers/dbController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/hahaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/hahaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/luanController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/luandeptraiController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/systemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/systemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/AutoLoad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/AutoLoad.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/http/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luandeptrai" beforeDir="false" afterPath="$PROJECT_DIR$/luandeptrai" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +48,11 @@
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/mikemccabe/json-patch-php" />
+      <path value="$PROJECT_DIR$/vendor/guzzle/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/rackspace/php-opencloud" />
     </include_path>
   </component>
   <component name="ProjectId" id="1iBtUqPizEpFYBWWiQEjC27ZDcf" />
@@ -104,6 +105,8 @@
       <workItem from="1601903983462" duration="15455000" />
       <workItem from="1601957034921" duration="18519000" />
       <workItem from="1602063984491" duration="8861000" />
+      <workItem from="1602120888583" duration="1745000" />
+      <workItem from="1602127344158" duration="16245000" />
     </task>
     <servers />
   </component>
@@ -123,18 +126,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="700" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601499454172">
+    <state x="586" y="198" key="#Inspections" timestamp="1602147332977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="700" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601499454172" />
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1602147332977" />
+    <state x="700" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602149916039">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="700" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602149916039" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601730153703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601730153703" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602066143873">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602147366828">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602066143873" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602147366828" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1602066032586">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

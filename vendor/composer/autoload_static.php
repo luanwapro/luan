@@ -7,6 +7,18 @@ namespace Composer\Autoload;
 class ComposerStaticInitf46b5851f4214151fa17afc68e5a16d1
 {
     public static $prefixLengthsPsr4 = array (
+        'm' => 
+        array (
+            'mikemccabe\\JsonPatch\\' => 21,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Component\\EventDispatcher\\' => 34,
+        ),
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -14,9 +26,42 @@ class ComposerStaticInitf46b5851f4214151fa17afc68e5a16d1
     );
 
     public static $prefixDirsPsr4 = array (
+        'mikemccabe\\JsonPatch\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikemccabe/json-patch-php/src',
+        ),
+        'Symfony\\Component\\EventDispatcher\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'O' => 
+        array (
+            'OpenCloud' => 
+            array (
+                0 => __DIR__ . '/..' . '/rackspace/php-opencloud/lib',
+            ),
+        ),
+        'G' => 
+        array (
+            'Guzzle\\Tests' => 
+            array (
+                0 => __DIR__ . '/..' . '/guzzle/guzzle/tests',
+            ),
+            'Guzzle' => 
+            array (
+                0 => __DIR__ . '/..' . '/guzzle/guzzle/src',
+            ),
         ),
     );
 
@@ -25,6 +70,7 @@ class ComposerStaticInitf46b5851f4214151fa17afc68e5a16d1
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitf46b5851f4214151fa17afc68e5a16d1::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitf46b5851f4214151fa17afc68e5a16d1::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf46b5851f4214151fa17afc68e5a16d1::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

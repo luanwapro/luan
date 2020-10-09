@@ -100,6 +100,11 @@ class controller{
 
 
     }
+    static function  getConfig(){
+
+        $string = file_get_contents(dirname(__FILE__)."/../../config/config.json");
+        return  (array)(json_decode($string)->DB[0]);
+    }
 
 
 }
